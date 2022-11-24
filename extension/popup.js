@@ -9,16 +9,6 @@ window.onload = function () {
       };
 	  const title = document.getElementById("file_name").innerText;
       window.open(`http://localhost:5000/?url=${url} &title=${encodeURI(title)} `, "_blank");
-      //   const req = new XMLHttpRequest();
-      //   const baseUrl = "http://localhost:5000/upload";
-
-      //   req.open("POST", baseUrl, true);
-      //   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      //   req.send(JSON.stringify(message));
-      //   req.onload  = function() {
-      //   	var jsonResponse = req.response;
-      //   	chrome.runtime.sendMessage(jsonResponse);
-      //    };
     });
   };
 
