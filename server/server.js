@@ -1,5 +1,6 @@
 const express = require("express");
 const ytdl = require("ytdl-core");
+const contentDisposition = require('content-disposition');
 // const youtube = require('ytdl-core');
 const app = express();
 app.use(express.json());
@@ -12,9 +13,11 @@ app.listen("5000", function () {
 
 app.get("/", (req, res) => {
   let videoURL = req.query.url;
-  console.log(videoURL);
+  let videoTitle = req.query.title;
+
+  console.log(decodeURIComponent(videoTitle));
   res.writeHead(200, {
-    "Content-Disposition": `attachment; filename= ${seconds}+video.mp4`,
+    "Content-Disposition": `attachment; filename= ${contentDisposition(videoTitle)}+.mp4`,
   });
   ytdl(videoURL, {
     format: "mp4",

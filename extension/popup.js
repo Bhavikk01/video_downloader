@@ -7,7 +7,8 @@ window.onload = function () {
       var message = {
         url: url,
       };
-      window.open(`http://localhost:5000/?url=${url}`, "_blank");
+	  const title = document.getElementById("file_name").innerText;
+      window.open(`http://localhost:5000/?url=${url} &title=${encodeURI(title)} `, "_blank");
       //   const req = new XMLHttpRequest();
       //   const baseUrl = "http://localhost:5000/upload";
 
