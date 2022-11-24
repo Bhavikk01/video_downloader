@@ -7,6 +7,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
+        "tabs",
         "downloads",
         "activeTab",
         "scripting",
@@ -14,6 +15,6 @@
         "<all_urls>"
     ],
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["popup.js" ]
     }
 }
