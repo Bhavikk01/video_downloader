@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
   console.log(decodeURIComponent(videoTitle));
   res.writeHead(200, {
-    "Content-Disposition": `attachment; filename= ${contentDisposition(videoTitle)}+.mp4`,
+    "Content-Disposition": `attachment; filename= ${decodeURIComponent(videoTitle)}.mp4`,
   });
   ytdl(videoURL, {
     format: "mp4",
