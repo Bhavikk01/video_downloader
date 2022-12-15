@@ -1,81 +1,83 @@
 * {
-    /* border-radius: 20px; */
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  /* border-radius: 20px; */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 button {
-    /* background-color: #664de5; */
-    border: 10px 10px 10px 10px white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 20px 10px;
-    cursor: pointer;
-    color: black;
+  /* background-color: #664de5; */
+  border: 10px 1px 10px 10px white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  cursor: pointer;
+  color: black;
 }
-
+.fillbutton {
+    background-color: blue  !important;
+  }
 .wrapper {
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    width: 400px;
-    height: auto;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  width: 400px;
+  height: auto;
 }
 
 .logo {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    width: auto;
-    align-items: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  align-items: center;
 }
 
 .logo img {
-    align-items: center;
-    height: 24px;
-    width: 24px;
+  align-items: center;
+  height: 24px;
+  width: 24px;
 }
 
 .logo h1,
 h2,
 h3,
 h4 {
-    font-family: poppins;
-    font-weight: 800;
-    padding-left: 18px;
+  font-family: poppins;
+  font-weight: 800;
+  padding-left: 18px;
 }
 
 .feeds {
-    padding: 10px;
+  padding: 10px;
 }
 
 .hero-section {
-    margin: 5px;
-    box-shadow: grey 2px 2px 10px 0px;
-    align-items: center;
-    padding: 10px 30px;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border-radius: 8px;
+  margin: 5px;
+  box-shadow: grey 2px 2px 10px 0px;
+  align-items: center;
+  padding: 10px 30px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 8px;
 }
 
 .hero-image {
-    height: 150px;
-    width: 300px;
+  height: 150px;
+  width: 300px;
 }
 
 footer {
-    color: #130406;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #130406;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .danger {
-    background-color: red;
+  background-color: red;
 }
 
 .gap {
-    height: 20px;
+  height: 20px;
 }

@@ -1,20 +1,24 @@
-const express = require('express');
-// const youtube = require('ytdl-core');
+const express = require("express");
+const ytdl = require("ytdl-core");
+const contentDisposition = require('content-disposition');
 const app = express();
 app.use(express.json());
-app.use(
-    express.urlencoded({extended: true})
-)
-
-app.listen('5000', function () {
-    console.log("Server is started successfully");
+app.use(express.urlencoded({ extended: true }));
+const dateObject = new Date();
+const seconds = dateObject.getSeconds();
+app.listen("5000", function () {
+  console.log("Server is started successfully");
 });
 
-app.get('/downloads', (req, res) => {
-    
-});
+app.get("/", (req, res) => {
+  let videoURL = req.query.url;
+  let videoTitle = req.query.title;
 
-app.post('/upload', (req, res) => {
-    console.log(JSON.stringify(req.body.url))
-    res.send({"url" : req.body.url});
+  console.log(decodeURIComponent(videoTitle));
+  res.writeHead(200, {
+    "Content-Disposition": `attachment; filename= ${decodeURIComponent(videoTitle)}.mp4`,
+  });
+  ytdl(videoURL, {
+    format: "mp4",
+  }).pipe(res);
 });
