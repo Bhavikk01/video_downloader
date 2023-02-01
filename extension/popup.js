@@ -8,7 +8,7 @@ window.onload = function () {
         url: url,
       };
 	  const title = document.getElementById("file_name").innerText;
-      window.open(`http://localhost:5000/?url=${url} &title=${encodeURI(title)} `, "_blank");
+      window.open(`http://localhost:3000/?url=${url} &title=${encodeURI(title)} `, "_blank");
     });
   };
 
